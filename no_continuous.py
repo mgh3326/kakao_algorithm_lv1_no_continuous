@@ -2,10 +2,7 @@ def no_continuous(s):
     # 함수를 완성하세요
     result = list()
     for i in range(0, len(s)):
-        if len(result) > 0:
-            if result[- 1] != s[i]:
-                result.append(s[i])
-        else:
+        if len(result) == 0 or result[len(result) - 1] != s[i]:
             result.append(s[i])
     return result
 
